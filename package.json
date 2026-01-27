@@ -1,0 +1,27 @@
+{
+    "name": "@alexa.kitsune/ale",
+    "version": "0.0.2",
+    "description": "ALE v0.0.2 parser + stringifier (JSON ⇄ ALE)",
+    "type": "module",
+    "main": "./ale.js",
+    "exports": {
+        ".": "./ale.js"
+    },
+    "files": [
+        "ale.js",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "test": "node -e \"import('./ale.js').then(m=>{ if(!m.parseALE) throw new Error('parseALE missing'); console.log('ok'); })\"",
+        "prepublishOnly": "npm test"
+    },
+    "keywords": [
+        "parser",
+        "serializer",
+        "dsl",
+        "data-format",
+        "ale"
+    ],
+    "license": "MIT"
+}
