@@ -1,0 +1,10 @@
+{
+  "grammar": "next",
+  "seed": "0x5f5f5e2026",
+  "requestedFiniteValues": 100000,
+  "rawBitPatternsGenerated": 100053,
+  "checked": 100000,
+  "exactByObjectIs": true,
+  "canonicalStable": true,
+  "failures": []
+}

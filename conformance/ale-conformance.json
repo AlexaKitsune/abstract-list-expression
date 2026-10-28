@@ -1,0 +1,243 @@
+{
+  "format": "ALE-Conformance-1",
+  "description": "Portable semantic and canonicalization fixtures. expectedJSON uses standard JSON; specialValues adds representations JSON-only consumers may not preserve.",
+  "validDocuments": [
+    {
+      "id": "current-basic-scalars",
+      "dialect": "current",
+      "source": "name: Ada\nactive: true\nitems: [1, -, 3]",
+      "expectedJSON": {
+        "name": "Ada",
+        "active": true,
+        "items": [1, null, 3]
+      }
+    },
+    {
+      "id": "current-table-empty-cell",
+      "dialect": "current",
+      "source": "rows{id, label}:\n    1, fox\n    2,",
+      "expectedJSON": {
+        "rows": [
+          {"id": 1, "label": "fox"},
+          {"id": 2, "label": null}
+        ]
+      }
+    },
+    {
+      "id": "next-scientific-values",
+      "dialect": "next",
+      "source": "small: 1e-7\nlarge: 1E+21",
+      "expectedJSON": {"small": 1e-7, "large": 1e21},
+      "canonical": "small: 1e-7\nlarge: 1e+21"
+    },
+    {
+      "id": "next-number-and-exponent-string",
+      "dialect": "next",
+      "source": "number: 1e3\ntext: \"1e3\"",
+      "expectedJSON": {"number": 1000, "text": "1e3"},
+      "canonical": "number: 1000\ntext: \"1e3\""
+    },
+    {
+      "id": "next-negative-zero",
+      "dialect": "next",
+      "source": "zero: -0",
+      "expectedJSON": {"zero": -0},
+      "specialValues": [
+        {"path": ["zero"], "encoding": "binary64", "bits": "8000000000000000"}
+      ],
+      "canonical": "zero: -0"
+    },
+    {
+      "id": "legacy-last-duplicate-wins",
+      "dialect": "legacy",
+      "source": "value: first\nvalue: last",
+      "expectedJSON": {"value": "last"}
+    }
+  ],
+  "dialectDifferences": [
+    {
+      "id": "bare-exponent-string-vs-number",
+      "source": "value: 1e3",
+      "outcomes": {
+        "legacy": {"value": "1e3"},
+        "current": {"value": "1e3"},
+        "next": {"value": 1000}
+      },
+      "classification": "semantic difference; migration must use the explicit source dialect"
+    }
+  ],
+  "compatibilityMatrix": [
+    {
+      "feature": "ordinary-number",
+      "classification": "compatible",
+      "source": "value: 12",
+      "outcomes": {"legacy": {"value": 12}, "current": {"value": 12}, "next": {"value": 12}}
+    },
+    {
+      "feature": "quoted-exponent-like-string",
+      "classification": "compatible",
+      "source": "value: \"1e3\"",
+      "outcomes": {"legacy": {"value": "1e3"}, "current": {"value": "1e3"}, "next": {"value": "1e3"}}
+    },
+    {
+      "feature": "boolean-and-null",
+      "classification": "compatible",
+      "source": "enabled: true\nmissing: -",
+      "outcomes": {
+        "legacy": {"enabled": true, "missing": null},
+        "current": {"enabled": true, "missing": null},
+        "next": {"enabled": true, "missing": null}
+      }
+    },
+    {
+      "feature": "compact-boolean-flags",
+      "classification": "compatible",
+      "source": "!disabled\n¡enabled",
+      "outcomes": {
+        "legacy": {"disabled": false, "enabled": true},
+        "current": {"disabled": false, "enabled": true},
+        "next": {"disabled": false, "enabled": true}
+      }
+    },
+    {
+      "feature": "inline-and-nested-arrays",
+      "classification": "compatible",
+      "source": "items: [[1, 2], 3]",
+      "outcomes": {
+        "legacy": {"items": [[1, 2], 3]},
+        "current": {"items": [[1, 2], 3]},
+        "next": {"items": [[1, 2], 3]}
+      }
+    },
+    {
+      "feature": "table",
+      "classification": "compatible",
+      "source": "rows{id, name}:\n    1, Ada",
+      "outcomes": {
+        "legacy": {"rows": [{"id": 1, "name": "Ada"}]},
+        "current": {"rows": [{"id": 1, "name": "Ada"}]},
+        "next": {"rows": [{"id": 1, "name": "Ada"}]}
+      }
+    },
+    {
+      "feature": "spread",
+      "classification": "compatible",
+      "source": "items:\n    ...{id, name}:\n        1, Ada\n        2, Lin",
+      "outcomes": {
+        "legacy": {"items": [{"id": 1, "name": "Ada"}, {"id": 2, "name": "Lin"}]},
+        "current": {"items": [{"id": 1, "name": "Ada"}, {"id": 2, "name": "Lin"}]},
+        "next": {"items": [{"id": 1, "name": "Ada"}, {"id": 2, "name": "Lin"}]}
+      }
+    },
+    {
+      "feature": "slot-placeholder-selector",
+      "classification": "compatible",
+      "source": "rows{notes, easy}:\n    [:], {aspect}\n        alpha\n        <easy\n        sound",
+      "outcomes": {
+        "legacy": {"rows": [{"notes": ["alpha"], "easy": [{"aspect": "sound"}]}]},
+        "current": {"rows": [{"notes": ["alpha"], "easy": [{"aspect": "sound"}]}]},
+        "next": {"rows": [{"notes": ["alpha"], "easy": [{"aspect": "sound"}]}]}
+      }
+    },
+    {
+      "feature": "explicit-empty-array-spelling",
+      "classification": "syntactic-and-semantic-difference",
+      "source": "value: []:",
+      "outcomes": {
+        "legacy": {"value": "[]:"},
+        "current": {"error": "ALEParseError"},
+        "next": {"error": "ALEParseError"}
+      }
+    },
+    {
+      "feature": "duplicate-object-key",
+      "classification": "controlled-error-in-strict-dialects",
+      "source": "value: first\nvalue: last",
+      "outcomes": {
+        "legacy": {"value": "last"},
+        "current": {"error": "ALEParseError"},
+        "next": {"error": "ALEParseError"}
+      }
+    },
+    {
+      "feature": "duplicate-table-column",
+      "classification": "controlled-error-in-strict-dialects",
+      "source": "items{a, a}:\n    first, last",
+      "outcomes": {
+        "legacy": {"items": [{"a": "last"}]},
+        "current": {"error": "ALEParseError"},
+        "next": {"error": "ALEParseError"}
+      }
+    },
+    {
+      "feature": "excess-table-cells",
+      "classification": "controlled-error-in-strict-dialects",
+      "source": "items{a}:\n    first, extra",
+      "outcomes": {
+        "legacy": {"items": [{"a": "first"}]},
+        "current": {"error": "ALEParseError"},
+        "next": {"error": "ALEParseError"}
+      }
+    },
+    {
+      "feature": "empty-document",
+      "classification": "controlled-error-in-strict-dialects",
+      "source": "",
+      "outcomes": {
+        "legacy": [],
+        "current": {"error": "ALEParseError"},
+        "next": {"error": "ALEParseError"}
+      }
+    },
+    {
+      "feature": "empty-root-array",
+      "classification": "syntactic-and-semantic-difference",
+      "source": "[]",
+      "outcomes": {"legacy": [[]], "current": [], "next": []}
+    }
+  ],
+  "invalidDocuments": [
+    {
+      "id": "current-unclosed-quote",
+      "dialect": "current",
+      "source": "value: \"unterminated",
+      "expectedError": "ALEParseError"
+    },
+    {
+      "id": "next-unclosed-array-delimiter",
+      "dialect": "next",
+      "source": "value: [1, 2",
+      "expectedError": "ALEParseError"
+    },
+    {
+      "id": "current-duplicate-key",
+      "dialect": "current",
+      "source": "a: first\na: second",
+      "expectedError": "ALEParseError"
+    },
+    {
+      "id": "next-overflow",
+      "dialect": "next",
+      "source": "value: 1e309",
+      "expectedError": "ALEParseError"
+    },
+    {
+      "id": "next-underflow",
+      "dialect": "next",
+      "source": "value: 1e-999",
+      "expectedError": "ALEParseError"
+    },
+    {
+      "id": "current-invalid-selector",
+      "dialect": "current",
+      "source": "rows{notes, stats}:\n    [:], {x}\n        item\n        <missing",
+      "expectedError": "ALEParseError"
+    },
+    {
+      "id": "next-incomplete-exponent",
+      "dialect": "next",
+      "source": "value: 1e+",
+      "expectedError": "ALEParseError"
+    }
+  ]
+}

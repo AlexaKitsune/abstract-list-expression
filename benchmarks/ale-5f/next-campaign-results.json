@@ -1,0 +1,39 @@
+{
+  "grammar": "next",
+  "seed": 6234150,
+  "generatedValues": 10000,
+  "optionCases": 7,
+  "generatedRoundTrips": 70000,
+  "depthResults": [
+    {
+      "requestedDepth": 4,
+      "observedDepth": 4,
+      "values": 129,
+      "optionsPerValue": 7,
+      "roundTrips": 903
+    },
+    {
+      "requestedDepth": 8,
+      "observedDepth": 8,
+      "values": 129,
+      "optionsPerValue": 7,
+      "roundTrips": 903
+    },
+    {
+      "requestedDepth": 16,
+      "observedDepth": 16,
+      "values": 129,
+      "optionsPerValue": 7,
+      "roundTrips": 903
+    },
+    {
+      "requestedDepth": 32,
+      "observedDepth": 32,
+      "values": 129,
+      "optionsPerValue": 7,
+      "roundTrips": 903
+    }
+  ],
+  "depthRoundTrips": 3612,
+  "failures": 0
+}

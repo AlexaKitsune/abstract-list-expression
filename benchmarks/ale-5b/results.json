@@ -1,0 +1,1030 @@
+{
+  "generatedAt": "2026-10-27T22:08:19.261Z",
+  "environment": {
+    "node": "v24.21.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "yaml": "3.1.0 (Ruby 2.6.10, stdlib Psych)",
+    "benchmarkIterations": 40,
+    "samples": 9,
+    "warmupCorpusPasses": 3
+  },
+  "corpusCount": 13,
+  "rows": [
+    {
+      "id": "small-object",
+      "category": "objetos pequeños",
+      "format": "json-compact",
+      "bytesUtf8": 35,
+      "unicodeCodePoints": 35,
+      "utf16CodeUnits": 35,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "small-object",
+      "category": "objetos pequeños",
+      "format": "json-pretty-2",
+      "bytesUtf8": 48,
+      "unicodeCodePoints": 48,
+      "utf16CodeUnits": 48,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "small-object",
+      "category": "objetos pequeños",
+      "format": "yaml-psych",
+      "bytesUtf8": 33,
+      "unicodeCodePoints": 33,
+      "utf16CodeUnits": 33,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "small-object",
+      "category": "objetos pequeños",
+      "format": "ale-default",
+      "bytesUtf8": 24,
+      "unicodeCodePoints": 23,
+      "utf16CodeUnits": 23,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "small-object",
+      "category": "objetos pequeños",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 24,
+      "unicodeCodePoints": 23,
+      "utf16CodeUnits": 23,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "small-object",
+      "category": "objetos pequeños",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 24,
+      "unicodeCodePoints": 23,
+      "utf16CodeUnits": 23,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "small-object",
+      "category": "objetos pequeños",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 28,
+      "unicodeCodePoints": 28,
+      "utf16CodeUnits": 28,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "scalar-array",
+      "category": "arrays de escalares",
+      "format": "json-compact",
+      "bytesUtf8": 35,
+      "unicodeCodePoints": 35,
+      "utf16CodeUnits": 35,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "scalar-array",
+      "category": "arrays de escalares",
+      "format": "json-pretty-2",
+      "bytesUtf8": 54,
+      "unicodeCodePoints": 54,
+      "utf16CodeUnits": 54,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "scalar-array",
+      "category": "arrays de escalares",
+      "format": "yaml-psych",
+      "bytesUtf8": 40,
+      "unicodeCodePoints": 40,
+      "utf16CodeUnits": 40,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "scalar-array",
+      "category": "arrays de escalares",
+      "format": "ale-default",
+      "bytesUtf8": 31,
+      "unicodeCodePoints": 31,
+      "utf16CodeUnits": 31,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "scalar-array",
+      "category": "arrays de escalares",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 31,
+      "unicodeCodePoints": 31,
+      "utf16CodeUnits": 31,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "scalar-array",
+      "category": "arrays de escalares",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 31,
+      "unicodeCodePoints": 31,
+      "utf16CodeUnits": 31,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "scalar-array",
+      "category": "arrays de escalares",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 31,
+      "unicodeCodePoints": 31,
+      "utf16CodeUnits": 31,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "homogeneous-records",
+      "category": "registros homogéneos",
+      "format": "json-compact",
+      "bytesUtf8": 124,
+      "unicodeCodePoints": 124,
+      "utf16CodeUnits": 124,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "homogeneous-records",
+      "category": "registros homogéneos",
+      "format": "json-pretty-2",
+      "bytesUtf8": 234,
+      "unicodeCodePoints": 234,
+      "utf16CodeUnits": 234,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "homogeneous-records",
+      "category": "registros homogéneos",
+      "format": "yaml-psych",
+      "bytesUtf8": 115,
+      "unicodeCodePoints": 115,
+      "utf16CodeUnits": 115,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "homogeneous-records",
+      "category": "registros homogéneos",
+      "format": "ale-default",
+      "bytesUtf8": 78,
+      "unicodeCodePoints": 78,
+      "utf16CodeUnits": 78,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "homogeneous-records",
+      "category": "registros homogéneos",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 174,
+      "unicodeCodePoints": 174,
+      "utf16CodeUnits": 174,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "homogeneous-records",
+      "category": "registros homogéneos",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 78,
+      "unicodeCodePoints": 78,
+      "utf16CodeUnits": 78,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "homogeneous-records",
+      "category": "registros homogéneos",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 78,
+      "unicodeCodePoints": 78,
+      "utf16CodeUnits": 78,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "heterogeneous-records",
+      "category": "registros heterogéneos",
+      "format": "json-compact",
+      "bytesUtf8": 91,
+      "unicodeCodePoints": 91,
+      "utf16CodeUnits": 91,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "heterogeneous-records",
+      "category": "registros heterogéneos",
+      "format": "json-pretty-2",
+      "bytesUtf8": 185,
+      "unicodeCodePoints": 185,
+      "utf16CodeUnits": 185,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "heterogeneous-records",
+      "category": "registros heterogéneos",
+      "format": "yaml-psych",
+      "bytesUtf8": 88,
+      "unicodeCodePoints": 88,
+      "utf16CodeUnits": 88,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "heterogeneous-records",
+      "category": "registros heterogéneos",
+      "format": "ale-default",
+      "bytesUtf8": 133,
+      "unicodeCodePoints": 133,
+      "utf16CodeUnits": 133,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "heterogeneous-records",
+      "category": "registros heterogéneos",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 133,
+      "unicodeCodePoints": 133,
+      "utf16CodeUnits": 133,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "heterogeneous-records",
+      "category": "registros heterogéneos",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 133,
+      "unicodeCodePoints": 133,
+      "utf16CodeUnits": 133,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "heterogeneous-records",
+      "category": "registros heterogéneos",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 133,
+      "unicodeCodePoints": 133,
+      "utf16CodeUnits": 133,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "nullable-table",
+      "category": "filas con null",
+      "format": "json-compact",
+      "bytesUtf8": 148,
+      "unicodeCodePoints": 148,
+      "utf16CodeUnits": 148,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "nullable-table",
+      "category": "filas con null",
+      "format": "json-pretty-2",
+      "bytesUtf8": 258,
+      "unicodeCodePoints": 258,
+      "utf16CodeUnits": 258,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "nullable-table",
+      "category": "filas con null",
+      "format": "yaml-psych",
+      "bytesUtf8": 127,
+      "unicodeCodePoints": 127,
+      "utf16CodeUnits": 127,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "nullable-table",
+      "category": "filas con null",
+      "format": "ale-default",
+      "bytesUtf8": 80,
+      "unicodeCodePoints": 80,
+      "utf16CodeUnits": 80,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "nullable-table",
+      "category": "filas con null",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 190,
+      "unicodeCodePoints": 190,
+      "utf16CodeUnits": 190,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "nullable-table",
+      "category": "filas con null",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 80,
+      "unicodeCodePoints": 80,
+      "utf16CodeUnits": 80,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "nullable-table",
+      "category": "filas con null",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 80,
+      "unicodeCodePoints": 80,
+      "utf16CodeUnits": 80,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "deep-nesting",
+      "category": "anidamiento profundo",
+      "format": "json-compact",
+      "bytesUtf8": 84,
+      "unicodeCodePoints": 84,
+      "utf16CodeUnits": 84,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "deep-nesting",
+      "category": "anidamiento profundo",
+      "format": "json-pretty-2",
+      "bytesUtf8": 271,
+      "unicodeCodePoints": 271,
+      "utf16CodeUnits": 271,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "deep-nesting",
+      "category": "anidamiento profundo",
+      "format": "yaml-psych",
+      "bytesUtf8": 104,
+      "unicodeCodePoints": 104,
+      "utf16CodeUnits": 104,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "deep-nesting",
+      "category": "anidamiento profundo",
+      "format": "ale-default",
+      "bytesUtf8": 209,
+      "unicodeCodePoints": 209,
+      "utf16CodeUnits": 209,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "deep-nesting",
+      "category": "anidamiento profundo",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 209,
+      "unicodeCodePoints": 209,
+      "utf16CodeUnits": 209,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "deep-nesting",
+      "category": "anidamiento profundo",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 209,
+      "unicodeCodePoints": 209,
+      "utf16CodeUnits": 209,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "deep-nesting",
+      "category": "anidamiento profundo",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 209,
+      "unicodeCodePoints": 209,
+      "utf16CodeUnits": 209,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "configuration",
+      "category": "configuración",
+      "format": "json-compact",
+      "bytesUtf8": 127,
+      "unicodeCodePoints": 127,
+      "utf16CodeUnits": 127,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "configuration",
+      "category": "configuración",
+      "format": "json-pretty-2",
+      "bytesUtf8": 189,
+      "unicodeCodePoints": 189,
+      "utf16CodeUnits": 189,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "configuration",
+      "category": "configuración",
+      "format": "yaml-psych",
+      "bytesUtf8": 124,
+      "unicodeCodePoints": 124,
+      "utf16CodeUnits": 124,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "configuration",
+      "category": "configuración",
+      "format": "ale-default",
+      "bytesUtf8": 122,
+      "unicodeCodePoints": 122,
+      "utf16CodeUnits": 122,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "configuration",
+      "category": "configuración",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 122,
+      "unicodeCodePoints": 122,
+      "utf16CodeUnits": 122,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "configuration",
+      "category": "configuración",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 122,
+      "unicodeCodePoints": 122,
+      "utf16CodeUnits": 122,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "configuration",
+      "category": "configuración",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 128,
+      "unicodeCodePoints": 128,
+      "utf16CodeUnits": 128,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "events",
+      "category": "eventos",
+      "format": "json-compact",
+      "bytesUtf8": 143,
+      "unicodeCodePoints": 143,
+      "utf16CodeUnits": 143,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "events",
+      "category": "eventos",
+      "format": "json-pretty-2",
+      "bytesUtf8": 216,
+      "unicodeCodePoints": 216,
+      "utf16CodeUnits": 216,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "events",
+      "category": "eventos",
+      "format": "yaml-psych",
+      "bytesUtf8": 137,
+      "unicodeCodePoints": 137,
+      "utf16CodeUnits": 137,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "events",
+      "category": "eventos",
+      "format": "ale-default",
+      "bytesUtf8": 156,
+      "unicodeCodePoints": 156,
+      "utf16CodeUnits": 156,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "events",
+      "category": "eventos",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 156,
+      "unicodeCodePoints": 156,
+      "utf16CodeUnits": 156,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "events",
+      "category": "eventos",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 156,
+      "unicodeCodePoints": 156,
+      "utf16CodeUnits": 156,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "events",
+      "category": "eventos",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 156,
+      "unicodeCodePoints": 156,
+      "utf16CodeUnits": 156,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "conversation",
+      "category": "conversación",
+      "format": "json-compact",
+      "bytesUtf8": 141,
+      "unicodeCodePoints": 141,
+      "utf16CodeUnits": 141,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "conversation",
+      "category": "conversación",
+      "format": "json-pretty-2",
+      "bytesUtf8": 227,
+      "unicodeCodePoints": 227,
+      "utf16CodeUnits": 227,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "conversation",
+      "category": "conversación",
+      "format": "yaml-psych",
+      "bytesUtf8": 131,
+      "unicodeCodePoints": 131,
+      "utf16CodeUnits": 131,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "conversation",
+      "category": "conversación",
+      "format": "ale-default",
+      "bytesUtf8": 97,
+      "unicodeCodePoints": 97,
+      "utf16CodeUnits": 97,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "conversation",
+      "category": "conversación",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 170,
+      "unicodeCodePoints": 170,
+      "utf16CodeUnits": 170,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "conversation",
+      "category": "conversación",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 97,
+      "unicodeCodePoints": 97,
+      "utf16CodeUnits": 97,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "conversation",
+      "category": "conversación",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 97,
+      "unicodeCodePoints": 97,
+      "utf16CodeUnits": 97,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "api-response",
+      "category": "respuesta API",
+      "format": "json-compact",
+      "bytesUtf8": 172,
+      "unicodeCodePoints": 172,
+      "utf16CodeUnits": 172,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "api-response",
+      "category": "respuesta API",
+      "format": "json-pretty-2",
+      "bytesUtf8": 294,
+      "unicodeCodePoints": 294,
+      "utf16CodeUnits": 294,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "api-response",
+      "category": "respuesta API",
+      "format": "yaml-psych",
+      "bytesUtf8": 167,
+      "unicodeCodePoints": 167,
+      "utf16CodeUnits": 167,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "api-response",
+      "category": "respuesta API",
+      "format": "ale-default",
+      "bytesUtf8": 158,
+      "unicodeCodePoints": 157,
+      "utf16CodeUnits": 157,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "api-response",
+      "category": "respuesta API",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 212,
+      "unicodeCodePoints": 211,
+      "utf16CodeUnits": 211,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "api-response",
+      "category": "respuesta API",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 158,
+      "unicodeCodePoints": 157,
+      "utf16CodeUnits": 157,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "api-response",
+      "category": "respuesta API",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 162,
+      "unicodeCodePoints": 162,
+      "utf16CodeUnits": 162,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "unicode",
+      "category": "Unicode",
+      "format": "json-compact",
+      "bytesUtf8": 117,
+      "unicodeCodePoints": 87,
+      "utf16CodeUnits": 89,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "unicode",
+      "category": "Unicode",
+      "format": "json-pretty-2",
+      "bytesUtf8": 157,
+      "unicodeCodePoints": 127,
+      "utf16CodeUnits": 129,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "unicode",
+      "category": "Unicode",
+      "format": "yaml-psych",
+      "bytesUtf8": 124,
+      "unicodeCodePoints": 100,
+      "utf16CodeUnits": 100,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "unicode",
+      "category": "Unicode",
+      "format": "ale-default",
+      "bytesUtf8": 100,
+      "unicodeCodePoints": 70,
+      "utf16CodeUnits": 72,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "unicode",
+      "category": "Unicode",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 100,
+      "unicodeCodePoints": 70,
+      "utf16CodeUnits": 72,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "unicode",
+      "category": "Unicode",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 100,
+      "unicodeCodePoints": 70,
+      "utf16CodeUnits": 72,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "unicode",
+      "category": "Unicode",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 100,
+      "unicodeCodePoints": 70,
+      "utf16CodeUnits": 72,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "special-strings",
+      "category": "strings con caracteres especiales",
+      "format": "json-compact",
+      "bytesUtf8": 226,
+      "unicodeCodePoints": 225,
+      "utf16CodeUnits": 225,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "special-strings",
+      "category": "strings con caracteres especiales",
+      "format": "json-pretty-2",
+      "bytesUtf8": 263,
+      "unicodeCodePoints": 262,
+      "utf16CodeUnits": 262,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "special-strings",
+      "category": "strings con caracteres especiales",
+      "format": "yaml-psych",
+      "bytesUtf8": 212,
+      "unicodeCodePoints": 211,
+      "utf16CodeUnits": 211,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "special-strings",
+      "category": "strings con caracteres especiales",
+      "format": "ale-default",
+      "bytesUtf8": 213,
+      "unicodeCodePoints": 212,
+      "utf16CodeUnits": 212,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "special-strings",
+      "category": "strings con caracteres especiales",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 213,
+      "unicodeCodePoints": 212,
+      "utf16CodeUnits": 212,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "special-strings",
+      "category": "strings con caracteres especiales",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 213,
+      "unicodeCodePoints": 212,
+      "utf16CodeUnits": 212,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "special-strings",
+      "category": "strings con caracteres especiales",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 213,
+      "unicodeCodePoints": 212,
+      "utf16CodeUnits": 212,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "numeric-extremes",
+      "category": "números",
+      "format": "json-compact",
+      "bytesUtf8": 124,
+      "unicodeCodePoints": 124,
+      "utf16CodeUnits": 124,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "numeric-extremes",
+      "category": "números",
+      "format": "json-pretty-2",
+      "bytesUtf8": 153,
+      "unicodeCodePoints": 153,
+      "utf16CodeUnits": 153,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "numeric-extremes",
+      "category": "números",
+      "format": "yaml-psych",
+      "bytesUtf8": 127,
+      "unicodeCodePoints": 127,
+      "utf16CodeUnits": 127,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "numeric-extremes",
+      "category": "números",
+      "format": "ale-default",
+      "bytesUtf8": 743,
+      "unicodeCodePoints": 743,
+      "utf16CodeUnits": 743,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "numeric-extremes",
+      "category": "números",
+      "format": "ale-useTables-false",
+      "bytesUtf8": 743,
+      "unicodeCodePoints": 743,
+      "utf16CodeUnits": 743,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "numeric-extremes",
+      "category": "números",
+      "format": "ale-useSpread-false",
+      "bytesUtf8": 743,
+      "unicodeCodePoints": 743,
+      "utf16CodeUnits": 743,
+      "equivalent": true,
+      "error": null
+    },
+    {
+      "id": "numeric-extremes",
+      "category": "números",
+      "format": "ale-booleanShortcuts-false",
+      "bytesUtf8": 743,
+      "unicodeCodePoints": 743,
+      "utf16CodeUnits": 743,
+      "equivalent": true,
+      "error": null
+    }
+  ],
+  "performance": {
+    "json-compact": {
+      "serialization": {
+        "medianMs": 0.31179100000008475,
+        "p95Ms": 0.5695000000000618
+      },
+      "parsing": {
+        "medianMs": 0.5867499999999382,
+        "p95Ms": 0.6543329999999514
+      },
+      "roundTrip": {
+        "medianMs": 0.9175000000000182,
+        "p95Ms": 1.0884579999997186
+      }
+    },
+    "ale-default": {
+      "serialization": {
+        "medianMs": 2.0544169999998303,
+        "p95Ms": 3.9462499999999636
+      },
+      "parsing": {
+        "medianMs": 4.731333000000177,
+        "p95Ms": 7.5759579999999005
+      },
+      "roundTrip": {
+        "medianMs": 6.690208999999868,
+        "p95Ms": 7.690415999999914
+      }
+    },
+    "ale-useTables-false": {
+      "serialization": {
+        "medianMs": 1.4441249999999854,
+        "p95Ms": 2.078540999999859
+      },
+      "parsing": {
+        "medianMs": 4.529540999999881,
+        "p95Ms": 5.429333000000042
+      },
+      "roundTrip": {
+        "medianMs": 5.848833000000013,
+        "p95Ms": 6.3872919999998885
+      }
+    },
+    "ale-useSpread-false": {
+      "serialization": {
+        "medianMs": 1.4720829999996567,
+        "p95Ms": 2.721125000000029
+      },
+      "parsing": {
+        "medianMs": 3.9544169999999212,
+        "p95Ms": 4.002582999999959
+      },
+      "roundTrip": {
+        "medianMs": 6.087708999999904,
+        "p95Ms": 7.198582999999871
+      }
+    },
+    "ale-booleanShortcuts-false": {
+      "serialization": {
+        "medianMs": 1.5731249999998909,
+        "p95Ms": 1.903874999999971
+      },
+      "parsing": {
+        "medianMs": 4.081666000000041,
+        "p95Ms": 4.253583000000162
+      },
+      "roundTrip": {
+        "medianMs": 5.888582999999926,
+        "p95Ms": 6.1147500000001855
+      }
+    },
+    "yaml-psych": {
+      "serialization": {
+        "medianMs": 54.635000007692724,
+        "p95Ms": 55.03000000317115
+      },
+      "parsing": {
+        "medianMs": 44.29800000798423,
+        "p95Ms": 54.87100000027567
+      },
+      "roundTrip": {
+        "medianMs": 103.25000000011642,
+        "p95Ms": 104.5460000023013
+      }
+    }
+  },
+  "yamlVersion": "3.1.0 (Ruby 2.6.10, stdlib Psych)",
+  "roundTrips": {
+    "default": {
+      "checked": 13,
+      "failures": []
+    },
+    "useTables-false": {
+      "checked": 13,
+      "failures": []
+    },
+    "useSpread-false": {
+      "checked": 13,
+      "failures": []
+    },
+    "booleanShortcuts-false": {
+      "checked": 13,
+      "failures": []
+    }
+  }
+}

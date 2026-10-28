@@ -1,7 +1,7 @@
 {
     "name": "@alexa.kitsune/ale",
-    "version": "0.0.2",
-    "description": "ALE v0.0.2 parser + stringifier (JSON ⇄ ALE)",
+    "version": "0.1.0",
+    "description": "ALE v0.1.0 parser + stringifier (JSON ⇄ ALE)",
     "type": "module",
     "main": "./ale.js",
     "exports": {
@@ -10,10 +10,15 @@
     "files": [
         "ale.js",
         "README.md",
-        "LICENSE"
+        "CHANGELOG.md",
+        "LICENSE",
+        "docs/specification.md",
+        "docs/ale-5b1-results.md",
+        "docs/ale-5f-results.md",
+        "conformance/"
     ],
     "scripts": {
-        "test": "node -e \"import('./ale.js').then(m=>{ if(!m.parseALE) throw new Error('parseALE missing'); console.log('ok'); })\"",
+        "test": "node --test tests/*.test.js",
         "prepublishOnly": "npm test"
     },
     "keywords": [
@@ -23,5 +28,13 @@
         "data-format",
         "ale"
     ],
-    "license": "MIT"
+    "license": "MIT",
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "devDependencies": {
+        "@toon-format/toon": "4.4.0",
+        "js-tiktoken": "1.0.21",
+        "js-yaml": "5.5.0"
+    }
 }

@@ -1,0 +1,15 @@
+[
+  {"id":"small-object","category":"objetos pequeños","value":{"id":7,"name":"Ada","active":true}},
+  {"id":"scalar-array","category":"arrays de escalares","value":["red","green","blue",0,false,null]},
+  {"id":"homogeneous-records","category":"registros homogéneos","value":{"users":[{"id":1,"name":"Ada","role":"admin"},{"id":2,"name":"Lin","role":"editor"},{"id":3,"name":"Sam","role":"viewer"}]}},
+  {"id":"heterogeneous-records","category":"registros heterogéneos","value":{"items":[{"id":1,"name":"pen"},{"id":2,"price":1.25,"tags":["sale"]},"unclassified",null]}},
+  {"id":"nullable-table","category":"filas con null","value":{"measurements":[{"sensor":"north","value":null,"unit":"C"},{"sensor":"south","value":18.5,"unit":null},{"sensor":"west","value":null,"unit":null}]}},
+  {"id":"deep-nesting","category":"anidamiento profundo","value":{"level1":{"level2":[{"level3":{"level4":[{"level5":{"level6":{"leaf":"end"}}}]}}]}}},
+  {"id":"configuration","category":"configuración","value":{"service":{"host":"localhost","port":8080,"tls":false},"features":["cache","metrics"],"limits":{"retries":3,"timeoutMs":2500}}},
+  {"id":"events","category":"eventos","value":[{"ts":1735689600,"type":"login","user":"u-1"},{"ts":1735689605,"type":"click","target":"save"},{"ts":1735689610,"type":"logout","user":"u-1"}]},
+  {"id":"conversation","category":"conversación","value":{"messages":[{"role":"system","content":"Answer concisely."},{"role":"user","content":"What is 2 + 2?"},{"role":"assistant","content":"4."}]}},
+  {"id":"api-response","category":"respuesta API","value":{"status":200,"headers":{"content-type":"application/json","x-request-id":"req-42"},"body":{"ok":true,"data":[{"id":"a","score":0.91},{"id":"b","score":0.82}],"next":null}}},
+  {"id":"unicode","category":"Unicode","value":{"greeting":"こんにちは 🌍","names":["Zoë","李雷","Кот","مرحبا"],"combining":"é","symbol":"𝄞"}},
+  {"id":"special-strings","category":"strings con caracteres especiales","value":{"empty":"","numberLike":"00123","booleanLike":"true","nullLike":"null","delimiters":"a,b: c {d} [e] > < ! ¡ ...","quotes":"say \"hi\"","slashes":"C:\\temp\\file","whitespace":"  padded  ","lines":"first\nsecond\rthird\ttab"}},
+  {"id":"numeric-extremes","category":"números","value":{"zero":0,"negativeZero":0,"small":1e-7,"large":1e21,"max":1.7976931348623157e308,"min":5e-324,"integer":9007199254740991}}
+]
