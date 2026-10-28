@@ -19,6 +19,7 @@ docs/*
 !docs/ale-5i-release-blockers.md
 !docs/ale-5j-final-readiness.md
 !docs/ale-5k-release-candidate.md
+!docs/ale-5l-git-release.md
 
 node_modules/
 npm-debug.log*
