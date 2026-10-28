@@ -82,6 +82,6 @@ Un primer fixture de smoke usó un objeto con prototipo nulo y falló por difere
 
 ## 7. Estado final y limitaciones
 
-El commit de release identifica el código y metadatos de los que se construyó el tarball. No se modificó el árbol tras ese commit antes de empacar. Este informe añade un commit documental posterior; como `docs/ale-5l-git-release.md` no figura en el campo `files` de npm, ese commit no cambia el artefacto de distribución. Debe repetirse `npm pack` desde el HEAD final para confirmar el mismo SHA-256 antes de dar por cerrada la revisión documental.
+El commit de release identifica el código y metadatos de los que se construyó el tarball. El commit documental `8d14a70` añade solamente este informe y la excepción de `.gitignore`. Se repitió `npm pack` desde ese HEAD y se obtuvo el mismo SHA-256 `b0cd4feac0cebfe156f67b32e83d3087d1c0cdcfae16ab5d6dfbe647bfde7d3c` que al empacar desde el commit de release. Así se verificó que el commit documental no altera el contenido ni los bytes del paquete. La revisión actual añade esta actualización del informe, también fuera del campo `files` de npm.
 
 No se verificó el registro npm en esta fase; no se necesita para la consolidación Git y no se publicó. No se creó `v0.1.0`. El tarball previo de ALE-5K no estaba archivado, así que la comparación exacta se basó en el hash guardado en `docs/ale-5k-release-candidate.md` y en el artefacto precommit recreado localmente.
