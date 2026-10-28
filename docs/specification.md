@@ -1,6 +1,6 @@
 # ALE — Especificación técnica del lenguaje
 
-**Estado:** descripción normativa de current/legacy para el candidato local 0.1.0, contrastada con el parser, serializador y suite. El contrato se estabilizó originalmente en 0.0.2. §21 documenta el dialecto experimental optativo next, no predeterminado. Cuando la implementación no define una regla general, se indica la limitación en lugar de inferir una.
+**Estado:** descripción normativa de current/legacy para ALE 0.1.0, contrastada con el parser, serializador y suite. El contrato se estabilizó originalmente en 0.0.2. §21 documenta el dialecto experimental optativo next, no predeterminado. Cuando la implementación no define una regla general, se indica la limitación en lugar de inferir una.
 
 ## 1. Introducción y objetivos
 
@@ -349,8 +349,8 @@ La especificación se basa en ale.js y en tests/conformance.test.js, tests/gener
 
 Correspondencia revisada en ALE-5G:
 
-- README fue reemplazado por una guía que coincide con parseALE/stringifyALE, el default current, los modos legacy/next, las opciones y el dominio soportado. Su ejemplo principal se comprueba en current.
-- package.json identifica el candidato no publicado como 0.1.0; README conserva el dialecto current como predeterminado y marca next como experimental.
+- README ofrece una guía en inglés con traducción al español, alineada con parseALE/stringifyALE, el default current, los modos legacy/next, las opciones y el dominio soportado. El ejemplo principal se comprueba en current.
+- La metadata del paquete declara Node >=22 y conserva la interfaz ESM; para el candidato documental 0.1.1, el README mantiene current como predeterminado y marca next como experimental. La implementación runtime sigue siendo byte idéntica a la versión publicada 0.1.0.
 - El README resume slots y tablas y remite a esta especificación para la sintaxis contextual; no pretende enumerar toda la gramática en una sola precedencia léxica.
 - docs/semantic-contract.md es un historial de propuestas ALE-3, no un contrato vigente; varias propuestas ya fueron aprobadas o superadas por la especificación.
 - La detección de comillas/delimitadores no balanceados se corrigió en current/next durante ALE-5G. Legacy mantiene esas lecturas permisivas en escalares ordinarios.
@@ -383,13 +383,13 @@ items: [1e3,-2.5e-8]
 {"items":[1000,-2.5e-8]}
 ~~~
 
-La conformidad del signo de -0 se prueba con Object.is en tests/ale-5f.test.js. Este dialecto no cambia la tabla current/legacy de §18 ni el README. Los casos de overflow y underflow se prueban con errores controlados en la suite experimental.
+La conformidad del signo de -0 se prueba con Object.is en tests/ale-5f.test.js. Este dialecto no cambia la semántica current/legacy de §18. README resume next como dialecto experimental. Los casos de overflow y underflow se prueban con errores controlados en la suite experimental.
 - docs/ale-4a-results.md y docs/ale-4c-robustness.md son informes históricos anteriores a correcciones posteriores. ALE-4D rectifica que la diferencia descrita como null → {} no era una muestra mínima literal.
-- README compara cantidades de tokens y muestra documentos de ejemplo, pero no fija fecha/versión del tokenizer ni un script reproducible de medición. No se adoptan como propiedad formal del lenguaje.
+- README enlaza informes de benchmark con corpus, versiones y tokenizador documentados. Esos resultados son mediciones de los corpus citados, no propiedades normativas del lenguaje ni afirmaciones de superioridad general.
 
 ## 22. Cuestiones abiertas para una revisión futura
 
-- Decidir si la gramática actual debe rechazar uniformemente cualquier comilla sin cierre, incluidos escalares ordinarios, y si eso puede hacerse sin romper datos históricos.
+- Ampliar la cobertura para comprobar el rechazo de comillas sin cierre en todos los contextos escalares y estructurales; las pruebas actuales cubren los casos representativos de propiedades y delimitadores, mientras legacy conserva entradas permisivas.
 - Definir si la forma textual exponencial debe seguir siendo string o convertirse en número mediante una futura versión.
 - Considerar una gramática PEG completa que exprese de forma precisa los límites de contexto y continuación, sin cambiar el parser en esta fase.
 - Definir límites de recursos y errores controlados para entradas extremadamente profundas/grandes.

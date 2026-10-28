@@ -1,7 +1,7 @@
 {
     "name": "@alexa.kitsune/ale",
-    "version": "0.1.0",
-    "description": "ALE v0.1.0 parser + stringifier (JSON ⇄ ALE)",
+    "version": "0.1.1",
+    "description": "ALE v0.1.1 parser + stringifier (JSON ⇄ ALE)",
     "type": "module",
     "main": "./ale.js",
     "exports": {
@@ -11,14 +11,22 @@
         "ale.js",
         "README.md",
         "CHANGELOG.md",
+        "CONTRIBUTING.md",
         "LICENSE",
         "docs/specification.md",
+        "docs/README.es.md",
+        "docs/examples.md",
+        "docs/verify-examples.mjs",
+        "docs/ale-5b-benchmarks.md",
         "docs/ale-5b1-results.md",
         "docs/ale-5f-results.md",
+        "benchmarks/ale-5b/results.json",
+        "benchmarks/ale-5b1/results.json",
         "conformance/"
     ],
     "scripts": {
-        "test": "node --test tests/*.test.js",
+        "test": "npm run test:docs && node --test tests/*.test.js",
+        "test:docs": "node docs/verify-examples.mjs",
         "prepublishOnly": "npm test"
     },
     "keywords": [

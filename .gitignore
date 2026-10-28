@@ -20,6 +20,12 @@ docs/*
 !docs/ale-5j-final-readiness.md
 !docs/ale-5k-release-candidate.md
 !docs/ale-5l-git-release.md
+!docs/README.es.md
+!docs/examples.md
+!docs/verify-examples.mjs
+!docs/ale-5n-documentation-audit.md
+!docs/ale-5o-release-candidate.md
+!docs/ale-5p-git-release.md
 
 node_modules/
 npm-debug.log*
